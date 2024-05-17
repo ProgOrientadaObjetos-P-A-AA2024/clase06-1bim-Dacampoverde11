@@ -13,6 +13,13 @@ public class Computador {
    private Procesador procesador;
    private Memoria memoria;
    private double costoComputador;
+   
+   public Computador (String marc, Procesador p, Memoria m){
+       marca = marc;
+       procesador = p;
+       memoria = m;
+       
+   }
 
     public String obtenerMarca() {
         return marca;
@@ -42,14 +49,12 @@ public class Computador {
         return costoComputador;
     }
 
-    public void establecerCostoComputador(double costoComputador) {
-        this.costoComputador = costoComputador;
+    public void establecerCostoComputador() {
+        costoComputador = obtenerProcesador().obtenerCosto()
+                + obtenerMemoria().obtenerCosto();
     }
 
-    @Override
-    public String toString() {
-        String cadena = 
-    }
+    
     
     
    

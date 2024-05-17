@@ -4,6 +4,7 @@
  */
 package paquete3;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -20,6 +21,10 @@ public class Ejecutor {
         double costoProcesador;
         double costoMemoria;
         int numComputadoras;
+        Procesador procesador;
+        Memoria memoria;
+        ArrayList<Computador> computadores = new ArrayList<>();
+        
 
         System.out.println("Ingrese el numero de computadoras a ingresar: ");
         numComputadoras = sc.nextInt();
@@ -40,10 +45,20 @@ public class Ejecutor {
             costoMemoria = sc.nextDouble();
             sc.nextLine();
             
-            Memoria mem = new Memoria (marcaMemoria, costoMemoria);
-            Procesador proc = new Procesador (marcaProcesador, costoProcesador);
+            memoria = new Memoria (marcaMemoria, costoMemoria);
+            procesador = new Procesador (marcaProcesador, costoProcesador);
+            Computador computador = new Computador (marcaProcesador,
+                    procesador,memoria);
+            computador.establecerCostoComputador();
+            computadores.add(computador);
 
         }
+        
+        Venta v = new Venta (computadores);
+        v.establecerValorVenta();
+        System.out.println("////////////////////////////////////////////////////");
+        System.out.printf("%s\n",v);
+        
 
     }
 

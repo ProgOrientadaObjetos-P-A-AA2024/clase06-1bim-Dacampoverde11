@@ -26,7 +26,7 @@ public class Memoria {
         this.marca = marca;
     }
 
-    public double obetenerCosto() {
+    public double obtenerCosto() {
         return costo;
     }
 
