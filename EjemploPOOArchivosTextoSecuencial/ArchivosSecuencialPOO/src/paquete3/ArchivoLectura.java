@@ -80,6 +80,8 @@ public class ArchivoLectura {
 
                 ArrayList<String> cadenaProfesor = new ArrayList<>(
                         Arrays.asList(profesor.split("\\|")));
+                // Cuando se utiliza un separador diferente al punto o al ; 
+                // se coloca 2 // antes del caracter separador a utilizar
                 // ["Tara Hernandez", "contratado"]
                 //        0                 1
 
