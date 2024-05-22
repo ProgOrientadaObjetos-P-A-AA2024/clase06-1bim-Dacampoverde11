@@ -12,7 +12,7 @@ public class Ejecutor {
         // nombre del archivo
         String nombreArchivo = "empresas2.txt";
         
-        Empresa c1 = new Empresa("Textiles del Ecuador", "Quito");
+        Empresa c1 = new Empresa("Emopresa Textil sa", "Loja");
         
         
         ArchivoEscritura escritura = new ArchivoEscritura(nombreArchivo);

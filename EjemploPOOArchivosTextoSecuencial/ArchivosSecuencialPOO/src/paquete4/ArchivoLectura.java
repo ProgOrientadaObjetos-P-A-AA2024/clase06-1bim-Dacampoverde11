@@ -91,7 +91,7 @@ public class ArchivoLectura {
         String cadena = "Lista Empresas\n";
 
         for (int i = 0; i < obtenerLista().size(); i++) {
-            cadena = String.format("%s (%d) (%s %s)\n", cadena,
+            cadena = String.format("%s %d %s %s\n", cadena,
                     i + 1,
                     obtenerLista().get(i).obtenerNombre(),
                     obtenerLista().get(i).obtenerCiudad());
